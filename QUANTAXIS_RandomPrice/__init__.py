@@ -100,14 +100,16 @@ def get_random_price(price, code='rb1905', tradingDay='20181119', mu=0, sigma=0.
 @click.option('--theta', default=0.15)
 @click.option('--dt', default=1e-2)
 @click.option('--ifprint', default=True)
+@click.option('--weight', default=0.1)
 @click.option('--market_type', default=None)
-def generate(price, code, tradingday, mu, sigma, theta, dt, ifprint, market_type):
+def generate(price, code, tradingday, mu, sigma, theta, dt, ifprint, weight,market_type):
     data = get_random_price(price, code, tradingday,
-                            mu, sigma, theta, dt, ifprint, market_type)
+                            mu, sigma, theta, dt, ifprint,weight, market_type)
     print(data)
     data.LastPrice.plot()
     plt.show()
 
 
 if __name__ == '__main__':
-    print(get_random_price(3600))
+    generate(price=11,code='000001',tradingday='20210514',mu=0,sigma=0.2,theta=0.15,dt=1e-2,ifprint=True,weight=0.1,market_type=None)
+    # print(get_random_price(3600))
