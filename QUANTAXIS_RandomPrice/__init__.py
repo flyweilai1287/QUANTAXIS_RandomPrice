@@ -111,5 +111,6 @@ def generate(price, code, tradingday, mu, sigma, theta, dt, ifprint, weight,mark
 
 
 if __name__ == '__main__':
-    generate(price=11,code='000001',tradingday='20210514',mu=0,sigma=0.2,theta=0.15,dt=1e-2,ifprint=True,weight=0.1,market_type=None)
-    # print(get_random_price(3600))
+    print(get_random_price(3600))
+    # generate(price=11,code='000001',tradingday='20210514',mu=0,sigma=0.2,theta=0.15,dt=1e-2,ifprint=True,weight=0.1,market_type=None)
+
